@@ -8,11 +8,18 @@
   </div>
 {% endrow %}
 
-{% row %}  
+{% row "border-bottom" %}  
   <div class="col">
     {{post.content|safe}}
   </div>
 {% endrow %}
+
+{% row "border-bottom" %}
+{% col %}
+  {% include "blog/post-comments.html" %}
+{% endcol %}
+{% endrow %}
+
 
 {% row %}
 <div class="col">

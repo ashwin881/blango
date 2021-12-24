@@ -58,6 +58,12 @@ def row(attr=""):
 @register.simple_tag
 def endrow():
   return format_html('</div>')
+@register.simple_tag
+def col():
+  return format_html('<div class="col">')
+@register.simple_tag
+def endcol():
+  return format_html('</div>')
 
 @register.inclusion_tag("blog/post-list.html")
 def recent_posts(post):
