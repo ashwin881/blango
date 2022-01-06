@@ -49,6 +49,7 @@ class Dev(Configuration):
       "django.contrib.sessions",
       "django.contrib.messages",
       "django.contrib.staticfiles",
+      "blango_auth",
       "blog",
       "crispy_forms",
        "crispy_bootstrap5",
@@ -98,7 +99,8 @@ class Dev(Configuration):
         "ALTERNATIVE_DATABASE_URL",
         default=f"sqlite:///{BASE_DIR}/alternative_db.sqlite3",
     ),
-}
+} 
+  AUTH_USER_MODEL = "blango_auth.User"
   LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
