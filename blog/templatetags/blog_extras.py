@@ -59,8 +59,8 @@ def row(attr=""):
 def endrow():
   return format_html('</div>')
 @register.simple_tag
-def col():
-  return format_html('<div class="col">')
+def col(attr=""):
+  return format_html('<div class="col" {}>',attr)
 @register.simple_tag
 def endcol():
   return format_html('</div>')

@@ -139,8 +139,8 @@ class Dev(Configuration):
           'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
       },
   ]
-  
-
+  EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+  ACCOUNT_ACTIVATION_DAYS = 7
   # Internationalization
   # https://docs.djangoproject.com/en/3.2/topics/i18n/
   PASSWORD_HASHERS = [
